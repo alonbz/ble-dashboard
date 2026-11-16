@@ -300,6 +300,7 @@ function render(){
         ${displayName(s)!==s.mac?`<div class="mac num">${s.mac}</div>`:""}</div><span class="tag">${typeLabel[r.type]||r.type}</span></div>
       ${(t||h)?`<div class="vals">${t}${h}</div>`:""}
       ${st}
+      ${r.acc?`<div class="row acc" dir="ltr" style="justify-content:flex-end"><span>X <b class="num">${r.acc[0]}</b></span><span>Y <b class="num">${r.acc[1]}</b></span><span>Z <b class="num">${r.acc[2]}</b></span><span>mg</span></div>`:""}
       ${r.flag?`<div class="flag">${esc(r.flag)}</div>`:""}
       <div class="row">${bat}<span>RSSI <b class="num">${s.rssi}</b></span><span>${ago(s.ts)}</span></div>
     </div>`;
